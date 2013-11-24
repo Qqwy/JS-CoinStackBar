@@ -2,7 +2,6 @@
 		CoinStackBarBar: A customizable vertical progress bar in the shape of a stack of coins.
 		Author: Wiebe-Marten Wijnja(W-M@gmx.us)
 		Commissioned by: SlyFoxy12
-		Version:0.3 (Released on 24-11-2013)
 		Released under the GPLv3:
 		
 		    This library is free software: you can redistribute it and/or modify
@@ -302,7 +301,7 @@
 				
 				//If array, pick an image at random.
 				if(Object.prototype.toString.call(this.coinimgsrc) === '[object Array]'){
-					var index = Math.floor(Math.abs(this.rand(i,this.seed)*this.coinimgsrc.length));
+					var index = Math.floor(Math.abs(this.rand(i+1,this.seed)*this.coinimgsrc.length));
 					coinelem.src=this.coinimgsrc[index];
 				}else{
 					coinelem.src = this.coinimgsrc;
