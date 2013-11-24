@@ -12,6 +12,10 @@ A customizable vertical progress bar in the shape of a stack of coins.
 - Support for multiple different coin images in the same stack.
 - Can be set to any min-max value and coin stack height.
 
+#Examples
+Check out [this jsfiddle](http://jsfiddle.net/uHA9F/1/) for a quick example.
+A more advanced example can be found and downloaded straight here from the repository.
+
 
 #Usage
 
