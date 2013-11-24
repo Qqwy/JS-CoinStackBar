@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<head>
+	<style>
+		body{
+			background-color:rgb(250,250,250);
+			
+		}
+	
+		div#lipsum{
+			
+			max-width:500px;
+			background-color:rgb(230,230,230);
+			display:inline-block;
+			padding-right:20px;
+			padding-left:20px;
+			padding-top:50px;
+			padding-bottom:100px;
+		}
+		
+		div#lipsum div#CoinStackBar{
+			float:right;
+			
+		}
+	</style>
+	<script src="bitcoinstackv6.js"></script>
+
+	<script type="text/javascript">
+	window.requestAnimFrame = (function(callback){
+					return window.requestAnimationFrame ||
+					window.webkitRequestAnimationFrame ||
+					window.mozRequestAnimationFrame ||
+					window.oRequestAnimationFrame ||
+					window.msRequestAnimationFrame ||
+					function(callback){
+						window.setTimeout(callback, 1000 / 60);
+					};
+				})();
+		
+		
+		//The following functions are only to test the CoinStackBar object
+		
+		function setup(){
+			if(!document.createElement('svg').getAttributeNS){
+				var coinimg = ['bitcoin.png','bitcoin-silver.png','bitcoin-copper.png'];//'bitcoin.png';//['bitcoin.png','bitcoin-silver.png','bitcoin-copper.png'];
+			}else{
+				coinimg = ['bitcoin.svg', 'bitcoin-silver.svg', 'bitcoin-copper.svg'];//'bitcoin.svg';//['bitcoin.svg', 'bitcoin-silver.svg', 'bitcoin-copper.svg'];
+			}
+			
+			
+			//cs  = new CoinStackBar(document.getElementById("CoinStackBar"),coinimg, 200,100, 30, 0, 100, 0,  50, 5, 2,50,500, 1 , false,300);
+			cs = new CoinStackBar({
+					container:document.getElementById("CoinStackBar"),
+					coinimgsrc:coinimg,
+					coinimgwidth:200,
+					coinimgheight:100,
+					coinheight:30,
+					xoffset:10,
+					yoffset:6,
+					
+					startvalue:25,
+					maxstackheight:30,
+					containerwidth:50,
+					containerheight:500,
+			});
+			
+			
+			requestAnimFrame(test);
+		}
+		test = function(){
+			document.getElementById('CoinStackBar').CoinStackBar.setValue(50+50*Math.sin(Date.now()/3000));
+			
+			
+			requestAnimFrame(test);
+		}
+	</script>
+</head>
+<body onload="setup()">
+	<div id="lipsum">
+		<div id="CoinStackBar" >
+		</div>
+<p>This is an example page, detailing the use of the CoinStackBar with more advanced settings:</p>
+<p><ul>
+	<li>.SVG images are used on browsers that support it</li>
+	<li>Multiple coin images are used in one stack.</li>
+</ul></p>
+	</div>
+</body>
+</html>
