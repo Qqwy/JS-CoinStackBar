@@ -47,7 +47,9 @@ A customizable vertical progress bar in the shape of a stack of coins.
 * **reseed**: String with three possible values: If 'onzero', the seed value is changed whenever the stack is fully empty. If 'always', the seed value is changed after each coin. If 'never', the same seed will be used the whole time. Default:'always'.
 
 An example would be:
-``var cs = new CoinStackBar({
+
+``` 
+var cs = new CoinStackBar({
 					container:document.getElementById("coinstack_element"),
 					coinimgsrc:'bitcoin.svg',
 					coinimgwidth:200,
@@ -59,12 +61,14 @@ An example would be:
 					startvalue:25,
 					maxstackheight:30,
 					containerwidth:50,
-			});```
-After this, whenever needed, you can call *cs.setValue(some_value)*. The Coin Stack will then automatically animate to the next value.
+			});
+```
+			
+After this, whenever needed, you can call ```cs.setValue(some_value)```. The Coin Stack will then automatically animate to the next value.
 
 This function also takes an optional **newmin** and **newmax** parameter, to recalibrate the scale of the coin stack.
 
-You can refer to the coinStack object either by keeping a reference to it, or by using the .coinStack property of the the container element again (by using *document.getElementById('bar').coinStack.setValue(40)* or, if you are using jQuery: *$('#bar').coinStack.setValue(40)* )
+You can refer to the coinStack object either by keeping a reference to it, or by using the .coinStack property of the the container element again (by using ```document.getElementById('bar').coinStack.setValue(40)``` or, if you are using jQuery: ```$('#bar').coinStack.setValue(40)``` )
 
 
 For more in-depth information, check the comments inside the non-minified code.
