@@ -3,6 +3,10 @@ JS-CoinStackBar
 
 A customizable vertical progress bar in the shape of a stack of coins.
 
+This project was mainly created to be used on Bitcoin-themed web sites, but can of course be used on any web site that likes coins or stacks of other small objects.
+
+This project took quite some effort to complete. If you want to help me out, consider donating a few Bitcoincents to: **1Cg76Ft1Juhorwxs1HV8ER7D3rpvPpq9yF**
+
 #Features
 - Coins with random displacement from center, making it look stacked by hand.
 - All settings are easily changed/adpted to your own coin image
