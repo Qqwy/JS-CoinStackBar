@@ -76,7 +76,7 @@ After this, whenever needed, you can call ```cs.setValue(some_value)```. The Coi
 
 This function also takes an optional **newmin** and **newmax** parameter, to recalibrate the scale of the coin stack.
 
-You can refer to the coinStack object either by keeping a reference to it, or by using the .coinStack property of the the container element again (by using ```document.getElementById('bar').coinStack.setValue(40)``` or, if you are using jQuery: ```$('#bar').coinStack.setValue(40)``` )
+You can refer to the coinStack object either by keeping a reference to it, or by using the .coinStack property of the the container element again (by using ```document.getElementById('bar').CoinStackBar.setValue(40)``` or, if you are using jQuery: ```$('#bar').CoinStackBar.setValue(40)``` )
 
 
 For more in-depth information, check the comments inside the non-minified code.
