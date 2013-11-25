@@ -17,7 +17,7 @@ This project took quite some effort to complete. If you want to help me out, con
 - Can be set to any min-max value and coin stack height.
 
 #Examples
-Check out [this jsfiddle](http://jsfiddle.net/uHA9F/1/) for a quick example.
+Check out [this jsfiddle](http://jsfiddle.net/uHA9F/4/) for a quick example.
 A more advanced example can be found and downloaded straight here from the repository.
 
 
