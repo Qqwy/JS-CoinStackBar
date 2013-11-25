@@ -59,7 +59,7 @@
 			showshadow: Boolean. Doesn't create a shadow if false. Default: true.
 			seed: Starting seed for this stack. Using the same seed will produce the same stack on every computer. If not set, will create a random seed in the constructor.
 			reseed: String with three possible values: If 'onzero', the seed value is changed whenever the stack is fully empty. If 'always', the seed value is changed after each coin. If 'never', the same seed will be used the whole time. Default:'always'.
-
+			
 		*/
 		
 		//Test object:
@@ -156,7 +156,7 @@
 			this.shadow.style.height = this.coinimgheight*this.stacksize*2 + 'px';
 			this.shadow.style.top = this.containerheight-(this.coinimgheight*this.stacksize*1.5) + 'px';//Todo for other images?
 			this.shadow.style.left = -(this.shadowwidth/4)+'px';
-			this.shadow.style.opacity=0;//(this.showshadow?1:0);
+			this.shadow.style.opacity=0;//Always start invisible.
 			//The shadow is dependent on CSS radial gradients: Won't work in IE8 or lower.
 			this.shadow.style.background= '-webkit-radial-gradient(ellipse closest-side, black, rgba(0,0,0,0))';
 			this.shadow.style.background = 'radial-gradient(ellipse closest-side, black, rgba(0,0,0,0))';
